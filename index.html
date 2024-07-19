@@ -98,6 +98,35 @@
             transform: scale(1.1);
         }
 
+        .music-player {
+            margin-top: 20px;
+        }
+
+        .music-button {
+            background: linear-gradient(45deg, #ff6f61, #d83a4e);
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            padding: 15px 30px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.2em;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .music-button:hover {
+            background: linear-gradient(45deg, #d83a4e, #ff6f61);
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .music-button:active {
+            transform: scale(0.95);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
         @media (max-width: 600px) {
             .caption {
                 font-size: 1em;
@@ -107,6 +136,11 @@
             .prev, .next {
                 font-size: 18px;
                 padding: 10px;
+            }
+
+            .music-button {
+                font-size: 1em;
+                padding: 12px 24px;
             }
         }
     </style>
