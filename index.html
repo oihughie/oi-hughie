@@ -4,22 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oi Hughie</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+        body {
+            background-image: url(homelander.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 80%;
+        }
+
+        .item {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .item p {
+            font-family: 'Pacifico', cursive;
+            font-size: 1.5em;
+            margin: 10px 0 0 0;
+        }
+    </style>
 </head>
 <body>
-    <p>oi hughie homelander done killed me wife and took me bloody son</p>
+    <div class="container">
+        <div class="item">
+            <img src="starlight_mewing.jpg" alt="Image 1">
+            <p>Starlight mewing.</p>
+        </div>
+        <div class="item">
+            <img src="atrain.jpeg" alt="Image 2">
+            <p>A-train's hairline.</p>
+        </div>
+        <div class="item">
+            <img src="Billy-butcher-S3.webp" alt="Image 3">
+            <p>Oi Hughie, Homelander done killed me wife and took me bloody son.</p>
+        </div>
+        <div class="item">
+            <img src="TheBoysDeep.jpg" alt="Image 4">
+            <p>The Peak's shoulder.</p>
+        </div>
+    </div>
 </body>
-<style>
-    body{
-        background-image: url(intro-1660230334.jpg);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: 100% 100%;
-        text-align: center;
-        
-    }
-    p{
-        color: white;
-        
-    }
-</style>
 </html>
