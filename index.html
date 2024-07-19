@@ -9,10 +9,11 @@
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
         body {
-            background-image: url(homelander.jpg);
+            background-image: url(ndcljmxu3kn51.webp);
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-size: cover;
+            background-color: black;
+            background-position: center center; /* Centers the image */
             margin: 0;
             display: flex;
             flex-direction: column;
@@ -188,16 +189,6 @@
             const slides = document.querySelectorAll('.slide');
             slides.forEach((slide, index) => {
                 slide.style.display = (index === slideIndex) ? 'block' : 'none';
-                if (index === slideIndex) {
-                    const images = slide.querySelectorAll('img');
-                    const captions = slide.querySelectorAll('.caption');
-                    images.forEach((img, i) => {
-                        img.style.animationDelay = `${i * 0.5}s`; // Staggered fade-in effect
-                    });
-                    captions.forEach((caption, i) => {
-                        caption.style.animationDelay = `${i * 0.5}s`; // Staggered fade-in effect
-                    });
-                }
             });
         }
 
