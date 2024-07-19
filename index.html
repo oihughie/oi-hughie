@@ -6,6 +6,7 @@
     <title>Oi Hughie</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
         body {
             background-image: url(homelander.jpg);
@@ -14,10 +15,12 @@
             background-size: 100% 100%;
             margin: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             text-align: center;
+            color: white;
         }
 
         .container {
@@ -48,6 +51,32 @@
             font-size: 1.5em;
             margin: 10px 0 0 0;
         }
+
+        .music-player {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .music-button {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #FFD700;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.2em;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .music-button:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #FFA500;
+        }
     </style>
 </head>
 <body>
@@ -61,7 +90,7 @@
             <p>A-train's hairline.</p>
         </div>
         <div class="item">
-            <img src="Billy-butcher-S3.webp" alt="Image 3">
+            <img src="butcher.jpg" alt="Image 3">
             <p>Oi Hughie, Homelander done killed me wife and took me bloody son.</p>
         </div>
         <div class="item">
@@ -69,5 +98,25 @@
             <p>The Peak's shoulder.</p>
         </div>
     </div>
+
+    <div class="music-player">
+        <audio id="audioPlayer" src="videoplayback.m4a"></audio>
+        <button class="music-button" onclick="togglePlay()">Play Music (It's better)</button>
+    </div>
+
+    <script>
+        const audioPlayer = document.getElementById('audioPlayer');
+        const musicButton = document.querySelector('.music-button');
+
+        function togglePlay() {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                musicButton.textContent = 'Pause Music';
+            } else {
+                audioPlayer.pause();
+                musicButton.textContent = 'Play Music';
+            }
+        }
+    </script>
 </body>
 </html>
